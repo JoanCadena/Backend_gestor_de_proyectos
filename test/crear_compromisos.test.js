@@ -6,5 +6,12 @@ describe("GET compromisos", () => {
         await request(app).get('/compromiso')
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
-        .expect(200)});
+        .expect(200,function(err,res){
+            if(err){
+                console.log(err)
+            }else{
+                console.log(res.body)
+            }
+        })
     });
+});
