@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../../app');
+const app = require('../app');
 
 describe('/POST anexar archivo', () => {
   it('responde con un archivo', async () => {
