@@ -1,8 +1,8 @@
 const request = require('supertest');
 const app = require('../app');
 
-describe("TDD compromisos", () => {
-    it("get que tin", async () => {
+describe("GET compromisos", () => {
+    it("Debe retornar un JSON", async () => {
         await request(app).get('/compromiso')
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
