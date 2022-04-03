@@ -7,14 +7,6 @@ describe("GET compromisos", () => {
             .get('/compromiso')
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
-            .expect(200,function(err,res){
-            if(err){
-                //console.log(err)
-                done(err)
-            }else{
-                //console.log(res.body)
-                done()
-            }
-        })
+            .expect(200, done)
     });
 });

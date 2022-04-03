@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "test_anexar_archivo": "mocha test/anexar_archivo.test.js",
-    "test_crear_compromiso": "mocha test/crear_compromisos.test.js",
+    "test_anexar_archivo": "mocha test/anexar_archivo.test.js --exit",
+    "test_crear_compromiso": "mocha test/crear_compromisos.test.js --exit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
