@@ -18,8 +18,8 @@ jobs:
         node-version: 14.18.0
         cache: 'npm'
     - run: npm ci
-    - run: npm test_anexar_archivo 
-    - run: npm test_crear_compromiso
-    - run: npm test_registro_espacio
-    - run: npm test_registro_integrantes_espacio
-    - run: test_registro_investigador
+    - run: npm run test_anexar_archivo 
+    - run: npm run test_crear_compromiso
+    - run: npm run test_registro_espacio
+    - run: npm run test_registro_integrantes_espacio
+    - run: npm run test_registro_investigador
