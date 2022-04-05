@@ -12,7 +12,7 @@ describe("Endpoint para archivos", () => {
 
   it('Devuelve un mensaje de error', done => {
       request(app).get('/archivo/noexistis')
-      .set('Accept', 'application/json')
+      .set('Decline', 'application/json')
       .expect(404)
       .end(err => {
         if (err) return done(err);
