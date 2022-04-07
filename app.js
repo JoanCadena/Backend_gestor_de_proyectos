@@ -1,6 +1,13 @@
 const express = require("express");
 const cors = require('cors');
 const config = require('./config')
+const Airbrake = require('@airbrake/node');
+
+new Airbrake.Notifier({
+  projectId: 409521,
+  projectKey: '61400a91f2262e4f0de0b481f666da05',
+  environment: 'production'
+});
 
 //Inicializar la libreria
 const app = express();
