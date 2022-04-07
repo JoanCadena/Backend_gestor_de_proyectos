@@ -1,0 +1,25 @@
+name: Integración Continua
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.18.0
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.18.0
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run test_anexar_archivo 
+    - run: npm run test_crear_compromiso
+    - run: npm run test_registro_espacio
+    - run: npm run test_registro_integrantes_espacio
+    - run: npm run test_registro_investigador
